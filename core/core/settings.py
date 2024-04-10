@@ -127,4 +127,5 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# user
+# user manager config
+AUTH_USER_MODLE = "accounts.User"
