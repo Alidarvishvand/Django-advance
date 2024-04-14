@@ -12,7 +12,9 @@ urlpatterns = [
     path("post/",views.PostListView.as_view(),name='post_list'),
     path('post/<int:pk>/',views.PostDetailView.as_view(),name="post_detail"),
     path('post/create/', views.PostCreateView.as_view(),name='post_create'),
-    #path()
+    path('post/<int:pk>/edit/',views.PostUpdateView.as_view(),name='post_edit'),
+    path('post/<int:pk>/delete/',views.PostDeleteView.as_view(),name='post_delete'),
+    # path('')
     # path("go-to-maktabkhooneh",views.RedirecTOMaktab.as_view(),name='redirect-to-maktabkhooneh'),
 
 ]
