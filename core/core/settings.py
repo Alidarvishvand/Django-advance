@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'blog',
+    'rest_framework',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -138,3 +140,10 @@ STATICFILES_DIRS = [BASE_DIR / 'staticfiles',
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+REST_FRAMEWORK = {
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.IsAuthenticated',
+    # ]
+}
+
+REST_FRAMEWORK = { 'DEFAULT_SCHEMA_CLASS':'rest_framework.schemas.coreapi.AutoSchema'}

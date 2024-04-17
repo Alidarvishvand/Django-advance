@@ -4,11 +4,14 @@ from django.http import HttpResponse
 from django.shortcuts import render,redirect,get_object_or_404
 from django.views.generic.base import TemplateView,RedirectView
 from django.views.generic import ListView,DetailView,FormView,CreateView,UpdateView,DeleteView
+
 from .models import Post
 from .forms import PostForm
 from django.urls import reverse
 from django.contrib.auth.mixins import LoginRequiredMixin,PermissionRequiredMixin
 # Create your views here.unresolved import ‘django.shortcuts’
+
+
 
 
 # def indexView(request):
@@ -56,7 +59,6 @@ class PostListView(PermissionRequiredMixin,LoginRequiredMixin,ListView):
 class PostDetailView(LoginRequiredMixin,DetailView):
     model = Post
     
-
 '''
 class PostCreateView(FormView):
     template_name = 'blog/contact.html'
@@ -84,3 +86,4 @@ class PostUpdateView(LoginRequiredMixin,UpdateView):
 class PostDeleteView(LoginRequiredMixin,DeleteView):
     model = Post
     success_url = '/blog/post/'
+
