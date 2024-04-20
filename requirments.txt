@@ -8,3 +8,6 @@ markdown
 django-filter 
 coreapi   
 drf-yasg[validation]
+
+
+django-mail-templated

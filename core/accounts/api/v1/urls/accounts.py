@@ -12,8 +12,12 @@ from rest_framework_simplejwt.views import (
 urlpatterns = [
     #regitration
     path('registeration/',views.RegisterationApiView.as_view(),name='registeration'),
+    #test
+    path('test-email',views.TestEmailSend.as_view(),name='test-email'),
     #activation 
+    # path('activate/confirm/',views.ActivateApiView.as_view,name=''),
     #resnd activation 
+    # path('activation/resend/',views.ResendActivationApiView.as_view(),name=''),
     #login
     path('token/login/',views.CustomObtainAuthToken.as_view(),name= 'login'),
     path('token/logout/',views.CUstomDiscardAuthToken.as_view(),name= 'logout'),

@@ -13,6 +13,16 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 from ...models import Profile
 from django.shortcuts import get_object_or_404
 
+
+# from django.core.mail import send_mail(send email with a terminal )
+
+from mail_templated import send_mail
+
+
+
+
+
+
 class RegisterationApiView(generics.GenericAPIView):
     serializer_class = RegistrationSerializers
     
@@ -83,4 +93,9 @@ class ProfileApiView(generics.RetrieveUpdateAPIView):
         obj = get_object_or_404(queryset,user=self.request.user)
         return obj
     
-    
+
+class TestEmailSend(generics.GenericAPIView):
+    def post(self,request,*args,**kwargs):
+        send_mail('email/hello.tpl', {'name': 'ali'}, 'say@gmail.com', ['imalidrv@gmail.com'])
+
+        return Response("email sents")
