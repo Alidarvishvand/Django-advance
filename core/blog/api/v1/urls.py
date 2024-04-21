@@ -1,5 +1,4 @@
-
-from django.urls import path,include
+from django.urls import path, include
 from . import views
 from rest_framework.routers import DefaultRouter
 
@@ -7,8 +6,8 @@ app_name = "api-v1"
 
 
 router = DefaultRouter()
-router.register(r'posts',views.PostModelsViewset,basename='post'),
-router.register('category',views.CategoryModelViewSet,basename='category')
+router.register(r"posts", views.PostModelsViewset, basename="post"),
+router.register("category", views.CategoryModelViewSet, basename="category")
 urlpatterns = router.urls
 # urlpatterns = [
 

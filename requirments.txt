@@ -11,3 +11,8 @@ drf-yasg[validation]
 
 
 django-mail-templated
+
+
+
+black
+flake8
