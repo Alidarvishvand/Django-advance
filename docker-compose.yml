@@ -14,7 +14,7 @@ services:
     environment:
       - SECRET_KEY=test
       - DEBUG=True
-
+    
 
 
   smtp4dev:

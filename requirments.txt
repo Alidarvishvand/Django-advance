@@ -1,14 +1,15 @@
-django >3.2,<3.3
+django==5.0.4
 
 python-decouple
 pillow
 
 djangorestframework
+rest_framework_simplejwt
 markdown      
 django-filter 
 coreapi   
 drf-yasg[validation]
-
+djoser
 
 django-mail-templated
 
@@ -16,3 +17,7 @@ django-mail-templated
 
 black
 flake8
+
+pytest
+pytest-django
+Faker

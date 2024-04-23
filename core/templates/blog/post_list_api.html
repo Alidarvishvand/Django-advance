@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>posts blog</h1>
+
+            {% comment %} <div>
+                    <a href='{% url "blog:post_detail" pk=post.id %}'><h2>{{post.id}} - {{ post.title }}</h2></a>
+                    <a href = "{% url 'blog:post_edit' pk=post.id %}">
+                        <h5>Edit</h5>
+                    </a>
+                    <a href = "{% url 'blog:post_delete' pk=post.id %}">
+                        <h5>Delete</h5>
+                    </a>
+                    <small>{{ post.author }}-{{ post.published_date }}</small>
+            </div> {% endcomment %}
+
+<script>
+    $.get("ajax/tet/.html",function (data){
+        $(".result").html(data);
+        alert("load was performed.");
+    })
+</script>
+</body>
+</html>
