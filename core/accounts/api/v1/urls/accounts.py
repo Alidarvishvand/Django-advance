@@ -32,9 +32,7 @@ urlpatterns = [
     ),
     # login
     path("token/login/", views.CustomObtainAuthToken.as_view(), name="login"),
-    path(
-        "token/logout/", views.CUstomDiscardAuthToken.as_view(), name="logout"
-    ),
+    path("token/logout/", views.CUstomDiscardAuthToken.as_view(), name="logout"),
     # change-password
     path(
         "password_change/",

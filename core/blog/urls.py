@@ -6,7 +6,7 @@ from django.views.generic.base import RedirectView
 
 app_name = "blog"
 urlpatterns = [
-    path('cbv-index',views.IndexView.as_view(),name='cbv-index'),
+    path("cbv-index", views.IndexView.as_view(), name="cbv-index"),
     # path("go-to-maktabkhooneh",views.RedirecTOMaktab.as_view(),name='redirect-to-maktabkhooneh'),
     path("api/v1/", include("blog.api.v1.urls")),
     path("post/api", views.PostListApiView.as_view(), name="post-list-api"),
@@ -24,4 +24,3 @@ urlpatterns = [
         name="post_delete",
     ),
 ]
-

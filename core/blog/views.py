@@ -69,6 +69,7 @@ class PostListView(PermissionRequiredMixin, LoginRequiredMixin, ListView):
 class PostListApiView(TemplateView):
     template_name = "blog/post_list.html"
 
+
 class PostDetailView(LoginRequiredMixin, DetailView):
     model = Post
 
