@@ -56,18 +56,18 @@ class PostListView(PermissionRequiredMixin, LoginRequiredMixin, ListView):
     permission_required = "blog.view_post"
 
     queryset = Post.objects.all()
-    model = Post
+    # model = Post
     context_object_name = "posts"
     # paginate_by = 1
     ordering = "-id"
 
-    def get_queryset(self):
-        posts = Post.objects.filter(status=True)
-        return posts
+    # def get_queryset(self):
+    #     posts = Post.objects.filter(status=True)
+    #     return posts
 
 
 class PostListApiView(TemplateView):
-    template_name = "blog/post_list.html"
+    template_name = "blog/post_list_api.html"
 
 
 class PostDetailView(LoginRequiredMixin, DetailView):

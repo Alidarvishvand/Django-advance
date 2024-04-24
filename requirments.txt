@@ -12,7 +12,7 @@ drf-yasg[validation]
 djoser
 
 django-mail-templated
-
+django-cors-headers
 
 
 black
