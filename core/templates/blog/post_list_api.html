@@ -21,7 +21,7 @@
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        $.get('/blog/api/v1/post/',  // url
+        $.get('/blog/api/v1/posts/',  // url
             function (data, textStatus, jqXHR) { 
                 wrapper = $('#post-wrapper');
                 for (post of data.results){

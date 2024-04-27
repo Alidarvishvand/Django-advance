@@ -13,11 +13,14 @@ djoser
 
 django-mail-templated
 django-cors-headers
-
-
+django_celery_beat
+django-redis
 black
 flake8
 
 pytest
 pytest-django
 Faker
+gunicorn
+celery
+redis
